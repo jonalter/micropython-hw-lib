@@ -93,3 +93,10 @@ class MAX6675:
             self._last_read_temp = value * 0.25
 
         return self._last_read_temp
+
+    def readFahrenheit(self):
+        """
+        Reads the tempurature then converts it to fahrenheit
+        :return: Measured temperature in fahrenheit
+        """
+        return self.read() * 9.0 / 5.0 + 32
